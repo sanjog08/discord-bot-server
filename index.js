@@ -1,3 +1,4 @@
+const keepAlive = require("./server");
 require('dotenv').config();
 
 const { Client, GatewayIntentBits } = require('discord.js');
@@ -76,4 +77,5 @@ client.on('messageCreate', message => {
 });
 
 // Login to Discord with your bot's token
+keepAlive();
 client.login(TOKEN);
